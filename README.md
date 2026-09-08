@@ -1,5 +1,11 @@
 # Yardstick Coffee — Good coffee. On repeat.
 
+---
+
+#### Ya hey, Astra just came out and used it to one prompt this week 5 AI project you just prompted too. Astra worked great i guess since it included the screenshots and pretty all the other documents you won't bother reading. Didn't learn anything but we are busy with system so :ey:
+
+---
+
 ITST 302 · Week 5 · Mini Project 04: Responsive Product Landing Page
 
 A Laravel and Tailwind CSS landing page for **Yardstick Coffee**, a real specialty coffee business in the Philippines. This is an independent student concept, not the official Yardstick website or an authorized commercial redesign.
@@ -48,13 +54,13 @@ Do not copy over an existing `.env` or regenerate an existing application key. N
 
 The page starts with a single-column mobile layout. `sm:` adds feature columns and room for secondary preview content, `md:` introduces the split hero and testimonial columns, and `lg:` enables the full navigation and three-column pricing grid. The central content container is capped at 1280px with responsive side padding.
 
-| Viewport | Layout behavior | Evidence |
-| --- | --- | --- |
-| 320px phone | Compact navigation and stacked content; no horizontal overflow | [Small mobile](screenshots/small-mobile.png) |
-| 390px phone | Touch-friendly menu and vertically arranged plans | [Mobile](screenshots/mobile.png) |
-| 768px tablet | Split hero, two-column features, compact menu | [Tablet](screenshots/tablet.png) |
-| 1024px laptop | Navigation adapts to available content width | [Laptop](screenshots/laptop.png) |
-| 1440px desktop | Full navigation, three-column features and pricing | [Desktop](screenshots/desktop.png) |
+| Viewport       | Layout behavior                                                | Evidence                                     |
+| -------------- | -------------------------------------------------------------- | -------------------------------------------- |
+| 320px phone    | Compact navigation and stacked content; no horizontal overflow | [Small mobile](screenshots/small-mobile.png) |
+| 390px phone    | Touch-friendly menu and vertically arranged plans              | [Mobile](screenshots/mobile.png)             |
+| 768px tablet   | Split hero, two-column features, compact menu                  | [Tablet](screenshots/tablet.png)             |
+| 1024px laptop  | Navigation adapts to available content width                   | [Laptop](screenshots/laptop.png)             |
+| 1440px desktop | Full navigation, three-column features and pricing             | [Desktop](screenshots/desktop.png)           |
 
 Grid handles repeated cards and section columns; Flexbox aligns navigation, calls to action, and icon/text rows. All photographs have intrinsic dimensions, descriptive alternative text, and responsive sizing. Below-the-fold images use lazy loading.
 
@@ -78,16 +84,16 @@ The landing page intentionally uses a consistent light theme. Its styles are sco
 
 Anonymous Blade components separate repeated UI from page composition. Props define the data each component accepts; the attribute bag allows callers to add classes and accessible labels. Blade's escaped output protects editable copy from being interpreted as HTML.
 
-| Component | Responsibility |
-| --- | --- |
-| `navbar.blade.php` | Branding, desktop navigation, and mobile disclosure menu |
-| `hero.blade.php` | Product introduction, primary image, and two calls to action |
-| `feature-card.blade.php` | Reusable icon, title, and description |
-| `pricing-card.blade.php` | Plan name, price, quantity, included features, and subscription link |
-| `testimonial-card.blade.php` | Labeled sample review, portrait, name, and role |
-| `button.blade.php` | Consistent link-based primary, secondary, and accent actions |
-| `footer.blade.php` | Company information, links, social icons, contact, and copyright |
-| `landing-icon.blade.php` | Small inline SVG icons without an additional dependency |
+| Component                    | Responsibility                                                       |
+| ---------------------------- | -------------------------------------------------------------------- |
+| `navbar.blade.php`           | Branding, desktop navigation, and mobile disclosure menu             |
+| `hero.blade.php`             | Product introduction, primary image, and two calls to action         |
+| `feature-card.blade.php`     | Reusable icon, title, and description                                |
+| `pricing-card.blade.php`     | Plan name, price, quantity, included features, and subscription link |
+| `testimonial-card.blade.php` | Labeled sample review, portrait, name, and role                      |
+| `button.blade.php`           | Consistent link-based primary, secondary, and accent actions         |
+| `footer.blade.php`           | Company information, links, social icons, contact, and copyright     |
+| `landing-icon.blade.php`     | Small inline SVG icons without an additional dependency              |
 
 ```blade
 <x-feature-card
@@ -109,13 +115,13 @@ Adding a feature, plan, FAQ, or sample review only requires changing the corresp
 
 The design uses product photography, clear type, and a warm neutral background. The orange accent echoes the color visible on Yardstick packaging; the wordmark and small Y symbol are an original concept treatment, not a claim to be the official logo. The frontend design skill guided restrained borders, consistent spacing, and simple interactions.
 
-| Token | Color | Use |
-| --- | --- | --- |
-| Paper | `#faf8f5` | Main background |
-| Ink | `#282622` | Main text and dark sections |
-| Line | `#dedbd5` | Subtle separators |
+| Token         | Color     | Use                            |
+| ------------- | --------- | ------------------------------ |
+| Paper         | `#faf8f5` | Main background                |
+| Ink           | `#282622` | Main text and dark sections    |
+| Line          | `#dedbd5` | Subtle separators              |
 | Coffee orange | `#fa8a52` | Accent controls with dark text |
-| Rust | `#ad471f` | Accent text and focus outlines |
+| Rust          | `#ad471f` | Accent text and focus outlines |
 
 Typography uses the starter's locally built Instrument Sans font, with 400, 500, and 600 weights. Headings have a clear scale, while body copy uses comfortable line spacing. Icons share a simple outline treatment. The featured Legazpi card uses a dark surface to create emphasis without claiming it is the most popular plan.
 
@@ -148,22 +154,22 @@ The existing authentication and team code is retained from the starter. No new b
 
 The **before** image captures the original Laravel starter homepage before implementation. The **after** image captures the completed landing-page hero at the same 1440px desktop viewport. Full-page and section captures document the complete interface.
 
-| Before | After |
-| --- | --- |
+| Before                                               | After                                               |
+| ---------------------------------------------------- | --------------------------------------------------- |
 | ![Original starter](documentation/before-design.png) | ![Completed design](documentation/after-design.png) |
 
 The redesign replaces framework onboarding content with a business-specific offer, original section hierarchy, product photography, reusable cards, clear calls to action, and responsive navigation. [Design comparison](documentation/design-comparison.md) explains the changes.
 
-| Screenshot | File |
-| --- | --- |
-| Navigation | [Navbar](screenshots/navbar.png) |
-| Hero | [Hero](screenshots/hero.png) |
-| Six features | [Features](screenshots/features.png) |
-| Product, desktop dashboard, and mobile preview | [Showcase](screenshots/showcase.png) |
-| Three pricing plans | [Pricing](screenshots/pricing.png) |
-| Sample testimonials | [Testimonials](screenshots/testimonials.png) |
-| Contact call to action | [Contact](screenshots/contact.png) |
-| Footer | [Footer](screenshots/footer.png) |
+| Screenshot                                     | File                                         |
+| ---------------------------------------------- | -------------------------------------------- |
+| Navigation                                     | [Navbar](screenshots/navbar.png)             |
+| Hero                                           | [Hero](screenshots/hero.png)                 |
+| Six features                                   | [Features](screenshots/features.png)         |
+| Product, desktop dashboard, and mobile preview | [Showcase](screenshots/showcase.png)         |
+| Three pricing plans                            | [Pricing](screenshots/pricing.png)           |
+| Sample testimonials                            | [Testimonials](screenshots/testimonials.png) |
+| Contact call to action                         | [Contact](screenshots/contact.png)           |
+| Footer                                         | [Footer](screenshots/footer.png)             |
 
 The VS Code project-tree screenshot, Blade-components-folder screenshot, and public GitHub-repository screenshot must be captured from the student's own editor and published repository before submission. They have not been fabricated.
 
