@@ -9,6 +9,11 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+    --color-paper: #faf8f5;
+    --color-ink: #282622;
+    --color-line: #dedbd5;
+    --color-coffee-orange: #fa8a52;
+    --color-rust: #ad471f;
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
     --color-zinc-50: #fafafa;
@@ -26,6 +31,40 @@
     --color-accent: var(--color-neutral-800);
     --color-accent-content: var(--color-neutral-800);
     --color-accent-foreground: var(--color-white);
+}
+
+@layer components {
+    .page-width {
+        @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+    }
+
+    .nav-link {
+        @apply underline-offset-4 transition-colors hover:text-rust hover:underline;
+    }
+}
+
+.landing {
+    color-scheme: light;
+}
+
+.landing :where(a, button, summary):focus-visible {
+    outline: 2px solid var(--color-rust);
+    outline-offset: 4px;
+}
+
+.landing :where(section, main) {
+    scroll-margin-top: 1.5rem;
+}
+
+.landing ::selection {
+    background: #fbd2bc;
+    color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html:has(.landing) {
+        scroll-behavior: smooth;
+    }
 }
 
 @layer theme {
